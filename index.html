@@ -7,7 +7,18 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
+
+<!-- Password Protection -->
+<div id="passwordOverlay" class="password-overlay">
+  <div class="password-box">
+    <img src="Perry-Pro-Tech-logo.webp" alt="Perry Protech Logo" class="logo">
+    <h2>Please enter the password to access the form:</h2>
+    <input type="password" id="passwordInput" placeholder="Password">
+    <button onclick="checkPassword()">Submit</button>
+  </div>
+</div>
+
+<div class="container" id="mainContent" style="display: none;">
     <img src="Perry-Pro-Tech-logo.webp" alt="Perry Protech Logo" class="logo">
     <h1>Customer Feedback Form</h1>
     <form id="feedbackForm">
@@ -57,6 +68,17 @@
 </div>
 
 <script>
+    // Password Protection
+    function checkPassword() {
+        var password = document.getElementById("passwordInput").value;
+        if (password === "yourpassword") {
+            document.getElementById("passwordOverlay").style.display = "none";
+            document.getElementById("mainContent").style.display = "block";
+        } else {
+            alert("Incorrect password. Please try again.");
+        }
+    }
+
     document.getElementById('feedbackForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the form from submitting
 
@@ -73,7 +95,7 @@
         const blob = new Blob([text], { type: 'text/plain' });
 
         // Create a mailto link
-        const mailtoLink = `mailto:mhinnant@perryprotech.com?subject=Customer Feedback&body=${encodeURIComponent(text)}`;
+        const mailtoLink = `mailto:mhinnant@perryprotech.com?subject=New Lead&body=${encodeURIComponent(text)}`;
 
         // Open the default email client with the mailto link
         window.location.href = mailtoLink;
