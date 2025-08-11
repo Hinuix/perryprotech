@@ -121,9 +121,7 @@ body {
     text-align: center;
   }
 
-  b{
-    color: black;
-  }
+  b
   
   /* Responsive styles */
   @media screen and (max-width: 600px) {

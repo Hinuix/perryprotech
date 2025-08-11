@@ -120,10 +120,6 @@ body {
   .center {
     text-align: center;
   }
-
-  b{
-    color: black;
-  }
   
   /* Responsive styles */
   @media screen and (max-width: 600px) {

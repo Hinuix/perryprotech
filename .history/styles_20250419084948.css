@@ -46,7 +46,6 @@ body {
   
   h1 {
     font-size: 24pt;
-    color: black;
   }
   
   h5 {
@@ -119,10 +118,6 @@ body {
   
   .center {
     text-align: center;
-  }
-
-  b{
-    color: black;
   }
   
   /* Responsive styles */
