@@ -71,32 +71,9 @@ body {
 
 /* Mobile-specific optimizations */
 @media only screen and (max-width: 768px) {
-  .pdf-wrapper {
-    max-width: 100%;
-    box-shadow: none;
-  }
-  
   .full-viewport-pdf {
     min-height: 100vh;
     min-height: -webkit-fill-available;
-  }
-}
-
-/* Desktop optimizations */
-@media only screen and (min-width: 769px) {
-  body {
-    padding: 20px 0;
-    background-color: #3a3a3a;
-  }
-  
-  .pdf-wrapper {
-    min-height: calc(100vh - 40px);
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  
-  .full-viewport-pdf {
-    min-height: calc(100vh - 40px);
   }
 }
 
